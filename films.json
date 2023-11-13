@@ -1,0 +1,48 @@
+[
+  {
+    "id": "1",
+    "mdb": "12341234",
+    "title": "peli 1",
+    "language": "spanish",
+    "authors": ["1", "2"],
+    "categories": ["sfy"]
+  }, {
+    "id": "2",
+    "mdb": "22341234",
+    "title": "libro 2",
+    "language": "spanish",
+    "authors": ["5", "3"],
+    "categories": [
+      "sfy",
+      "kids"
+    ]
+  }, {
+    "id": "3",
+    "mdb": "32341234",
+    "title": "libro 3",
+    "language": "spanish",
+    "authors": ["6", "4"],
+    "categories": [
+      "romance"
+    ]
+  }, {
+    "id": "4",
+    "mdb": "42341234",
+    "title": "libro 4",
+    "language": "spanish",
+    "authors": ["9"],
+    "categories": [
+      "story",
+      "kids"
+    ]
+  }, {
+    "id": "5",
+    "mdb": "52341234",
+    "title": "libro 5",
+    "language": "spanish",
+    "authors": ["7"],
+    "categories": [
+      "text"
+    ]
+  }
+]
