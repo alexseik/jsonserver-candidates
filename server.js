@@ -88,25 +88,30 @@ server.post('/auth/reset', (req, res) => {
 });
 
 
-// server.use(/^(?!\/auth).*$/,function (req, res, next) {
-//   if (req.headers.authorization === undefined) {
-//     if (req.method === 'GET') {
-//       next();
+// server.use(function (req, res, next) {
+//   if ((req.method === 'POST' || req.method === 'PUT' || req.method === 'DELETE') && !req.url.includes('auth')) {
+//     if (req.headers.authorization === undefined) {
+//       if (req.method === 'GET') {
+//         next();
+//         return;
+//       }
+//       const status = 401;
+//       const message = 'Error in authorization format';
+//       res.status(status).json({ status, message });
 //       return;
 //     }
-//     const status = 401;
-//     const message = 'Error in authorization format';
-//     res.status(status).json({ status, message });
-//     return;
-//   }
-//   try {
-//     verifyToken(req.headers.authorization.split(' ')[1]);
+//     try {
+//       verifyToken(req.headers.authorization.split(' ')[1]);
+//       next();
+//     } catch (err) {
+//       const status = 401;
+//       const message = 'Error access_token is revoked';
+//       res.status(status).json({ status, message });
+//     }
+//   } else {
 //     next();
-//   } catch (err) {
-//     const status = 401;
-//     const message = 'Error access_token is revoked';
-//     res.status(status).json({ status, message });
 //   }
+  
 // });
 
 server.use('/api', router);
